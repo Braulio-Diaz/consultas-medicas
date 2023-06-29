@@ -1,3 +1,10 @@
+<?php 
+
+include('user-sesion.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +24,7 @@
 </head>
 
 <body>
-  <?php include('views/navbar.php') ?>
+  <?php include('views/user-navbar.php') ?>
 
   <main class="container py-3">
     <div class="row">

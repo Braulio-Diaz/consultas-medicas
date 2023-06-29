@@ -8,21 +8,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="inicio.php">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="admin-inicio.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="agendar.php">Agendar</a>
+                    <a class="nav-link" href="admin-agendar.php">Agendar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="buscar-paciente.php">Buscar pacientes</a>
+                    <a class="nav-link" href="admin-buscar-paciente.php">Buscar pacientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="calendario.php">Calendario</a>
+                    <a class="nav-link" href="admin-calendario.php">Calendario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="administrar-usuarios.php">Administrar usuarios</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Salir</a>
+                    <a class="nav-link" href="close.php">Salir</a>
                 </li>
             </ul>
         </div>

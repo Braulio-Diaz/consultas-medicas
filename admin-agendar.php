@@ -1,3 +1,8 @@
+<?php 
+
+include('admin-sesion.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +22,7 @@
 </head>
 
 <body>
-    <?php include('views/navbar.php') ?>
+    <?php include('views/admin-navbar.php') ?>
 
     <main class="container py-3">
         <div class="row">
@@ -37,7 +42,7 @@
                 </div>
                 <div class="collapse" id="despliegue">
                     <div class="card card-body">
-                        <form action="leer-archivo.php" method="post" enctype="multipart/form-data">
+                        <form action="admin-leer-archivo.php" method="post" enctype="multipart/form-data">
                             <input type="file" name="archivo" id="archivo" onclick="validarArchivoExcel()" class="form-control" required>
                             <div class="col py-3 d-grid gap-2">
                                 <button type="submit" onclick="cargarExcel()" class="btn btn-outline-primary btn-lg btn-block">Agendar</button>

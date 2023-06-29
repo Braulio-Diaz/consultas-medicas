@@ -1,5 +1,7 @@
 <?php
 
+include('admin-sesion.php');
+
 require 'vendor/autoload.php';
 require 'config/database.php';
 
@@ -68,8 +70,8 @@ foreach ($datos as $row) {
 </head>
 
 <body>
-    <?php include('views/navbar.php');
-    echo count($datos);
+    <?php include('views/admin-navbar.php');
+    //echo count($datos);
     ?>
 
     <main class="container py-5">
@@ -85,13 +87,13 @@ foreach ($datos as $row) {
                     $ubicacionDestino = "" . $nuevoNombre;
 
                     //Le designamos una carpeta-ruta de destino al archivo excel
-                    $ubicacionDestino = dirname(__FILE__)."/archivosExcel";
-                    $url_target = str_replace('\\', '/', $ubicacionDestino).'/'.$nuevoNombre;
+                    $ubicacionDestino = dirname(__FILE__) . "/archivosExcel";
+                    $url_target = str_replace('\\', '/', $ubicacionDestino) . '/' . $nuevoNombre;
 
                     // Mueve el archivo a la ubicación deseada con el nuevo nombre
                     move_uploaded_file($ubicacionTemporal, $url_target);
 
-                    
+
 
                     // Inserta el nombre del archivo a la bd
                     $insertar_nombre_archivo = "INSERT INTO IMPORTACIONES(archivo_nombre) VALUES 

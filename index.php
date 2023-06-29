@@ -20,32 +20,13 @@
         <div class="row">
             <div class="col">
                 <center>
-                    <h1>Ingresar</h1>
+                    <h1>Bienvenido a Consultas Médicas</h1>
                 </center>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <form action="inicio.php" method="post" class="row g-3">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4 py-3">
-                        <label for="usuario" class="form-label">Usuario</label>
-                        <input type="text" name="usuario" id="usuario" class="form-control" autofocus required
-                            placeholder="correo electrónico">
-                    </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4 py-3">
-                        <label for="contraseña" class="form-label">Contraseña</label>
-                        <input type="password" name="contraseña" id="contraseña" class="form-control" required
-                            placeholder="*********">
-                    </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4 py-3 d-grid gap-2">
-                        <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Ingresar</button>
-                    </div>
-                </form>
+            <div class="col py-5">
+                <center><a href="login.php" class="btn btn-outline-primary btn-lg btn-block">Logearse</a></center>
             </div>
         </div>
     </main>

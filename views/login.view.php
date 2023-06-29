@@ -18,8 +18,8 @@
     <title>Login</title>
 </head>
 
-<body Class="py-5">
-    <main class="container">
+<body>
+    <main class="container py-5">
         <div class="row">
             <div class="col">
                 <center>
@@ -35,19 +35,17 @@
                     <div class="col-md-4 py-3">
                         <div class="input-group">
                             <i class='bx bxs-user bx-md' type='solid'></i>
-                            <input type="text" name="usuario" id="usuario" class="form-control" autofocus required
+                            <input type="text" name="usuario" id="usuario" class="form-control" autofocus 
                                 placeholder="Usuario">
                         </div>
                         <div class="input-group py-4">
                             <i class='bx bxs-lock bx-md'></i>
-                            <input type="password" name="password" id="password" class="form-control" required
+                            <input type="password" name="clave" id="clave" class="form-control" 
                                 placeholder="Contraseña">
                         </div>
                         <div class="d-grid gap-2">
                             <center><button type="submit"
                                     class="btn btn-outline-primary btn-lg btn-block">Ingresar</button></center>
-                            <br>
-                            <center><a class="login-link" href="#">¿No tienes cuenta?</a></center>
                         </div>
                 </form>
             </div>

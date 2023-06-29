@@ -1,5 +1,7 @@
 <?php
 
+include('admin-sesion.php');
+
 require 'config/database.php';
 require 'functions.php';
 require 'config/rutas.php';
@@ -7,11 +9,12 @@ require 'config/rutas.php';
 $db = new Database();
 $connect = $db->connection();
 
+//---------CODIGO QUE CREAR Y VALIDA USUARIOS------------------------
 $ok = false;
 
 if (isset($_POST['usuario']) && isset($_POST['clave']) && isset($_POST['rol'])) {
-    $usuario = $_POST['usuario'];
-    $clave = $_POST['clave'];
+    $usuario = seguridadDeIngreso($_POST['usuario']);
+    $clave = seguridadDeIngreso($_POST['clave']);
     $clave = hash('sha512', $clave); //Encripta la contraseña en la base de datos
     $rol = $_POST['rol'];
 
@@ -27,7 +30,7 @@ if (isset($_POST['usuario']) && isset($_POST['clave']) && isset($_POST['rol'])) 
             <script language="javascript">Swal.fire("Por favor ingrese todos los campos");</script>
             <title>Registro</title>
         </head>
-        <body Class="py-5">
+        <body>
         </body>
         </html>';
         echo '<script language="javascript">Swal.fire("Por favor ingrese todos los campos");</script>';
@@ -50,7 +53,7 @@ if (isset($_POST['usuario']) && isset($_POST['clave']) && isset($_POST['rol'])) 
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <title>Registro</title>
             </head>       
-            <body Class="py-5">
+            <body>
             </body>
             </html>';
             echo '<script language="javascript">Swal.fire("Este usuario ya existe");</script>';
@@ -69,11 +72,17 @@ if (isset($_POST['usuario']) && isset($_POST['clave']) && isset($_POST['rol'])) 
                 $ok = true;
             }
 
-            header('Location: login.php');
+            header('Location: administrar-usuarios.php');
         }
     }
 }
 
-require 'views/registro.view.php';
+
+//---------CODIGO QUE MUESTRA A LOS USUARIOS EN UNA TABLA------------------------
+$query = $connect->query("SELECT id, usuario, tipo_usuario FROM usuarios ORDER BY id ASC");
+$query->execute();
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+require 'views/administrar-usurios.view.php';
 
 ?>

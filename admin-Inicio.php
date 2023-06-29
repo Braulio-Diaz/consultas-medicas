@@ -1,4 +1,5 @@
 <?php
+include('admin-sesion.php');
 require 'config/database.php';
 
 $db = new Database();
@@ -27,7 +28,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-  <?php include('views/navbar.php') ?>
+  <?php include('views/admin-navbar.php') ?>
 
   <main class="container">
     <div class="row">
