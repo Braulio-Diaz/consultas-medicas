@@ -84,6 +84,9 @@
                                 <td>
                                     <?php echo $res['tipo_usuario'] ?>
                                 </td>
+                                <td>
+                                    <a href="delete.php?id=<?php echo $res['id'] ?>" class="btn btn-danger">Eliminar</a>
+                                </td>
                             </tr>
                         <?php } ?>
                         <tr>

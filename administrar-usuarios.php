@@ -83,6 +83,7 @@ $query = $connect->query("SELECT id, usuario, tipo_usuario FROM usuarios ORDER B
 $query->execute();
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
+
 require 'views/administrar-usurios.view.php';
 
 ?>
