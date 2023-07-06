@@ -26,7 +26,7 @@ $connect = $db->connection();
 </head>
 
 <body>
-  <?php include('views/admin-navbar.php') ?>
+<?php include('views/user-navbar.php') ?>
 
   <main class="container py-3">
     <div class="row">
